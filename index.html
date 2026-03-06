@@ -194,6 +194,34 @@ color:white;
 border:1px solid #1e293b;
 }
 
+#drop-area{
+border:2px dashed #38bdf8;
+padding:25px;
+text-align:center;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+#drop-area:hover{
+background:#020617;
+}
+
+#progress-container{
+width:100%;
+background:#1e293b;
+border-radius:6px;
+margin-top:10px;
+height:10px;
+overflow:hidden;
+}
+
+#progress-bar{
+width:0%;
+height:100%;
+background:#38bdf8;
+}
+  
 footer{
 text-align:center;
 padding:40px 10%;
@@ -370,6 +398,7 @@ enctype="multipart/form-data">
 
 <input type="text" name="service" placeholder="Service Needed">
 
+<input type="hidden" id="deviceType" name="deviceType"> 
 <label>Device Type</label>
 <select name="device">
 <option value="">Select Device Type</option>
@@ -379,7 +408,16 @@ enctype="multipart/form-data">
 </select>
 
 <label>Upload Screenshot (optional)</label>
-<input type="file" name="screenshot" accept="image/png, image/jpeg">
+<div id="drop-area">
+  <p>Drag & Drop Screenshot Here</p>
+  <p>or</p>
+<input type="file" id="fileInput" accept="image/*">
+</div>
+<img id="preview" style="display:none;max-width:200px;margin-top:10px;">
+
+<div id="progress-container">
+  <div id="progress-bar"></div>
+</div>
 
 <textarea placeholder="Describe your issue or installation project"></textarea>
 
@@ -395,8 +433,98 @@ enctype="multipart/form-data">
 
 </footer>
 
+<script>
+
+let dropArea = document.getElementById("drop-area");
+let fileInput = document.getElementById("fileInput");
+let preview = document.getElementById("preview");
+let progressBar = document.getElementById("progress-bar");
+
+dropArea.addEventListener("click", () => fileInput.click());
+
+fileInput.addEventListener("change", handleFile);
+
+dropArea.addEventListener("dragover", (e)=>{
+e.preventDefault();
+dropArea.style.borderColor="#ffffff";
+});
+
+dropArea.addEventListener("dragleave", ()=>{
+dropArea.style.borderColor="#38bdf8";
+});
+
+dropArea.addEventListener("drop",(e)=>{
+e.preventDefault();
+let file = e.dataTransfer.files[0];
+showPreview(file);
+});
+
+function handleFile(){
+let file = fileInput.files[0];
+showPreview(file);
+}
+
+function showPreview(file){
+
+if(!file) return;
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+preview.src = e.target.result;
+preview.style.display = "block";
+};
+
+reader.readAsDataURL(file);
+
+simulateUpload();
+
+}
+
+function simulateUpload(){
+
+let width = 0;
+
+let interval = setInterval(function(){
+
+if(width >= 100){
+clearInterval(interval);
+}else{
+width++;
+progressBar.style.width = width + "%";
+}
+
+},20);
+
+}
+
+</script>
+
+<script>
+
+function detectDevice(){
+
+let device = "Desktop";
+
+if(/tablet/i.test(navigator.userAgent)){
+device = "Tablet";
+}
+else if(/mobile/i.test(navigator.userAgent)){
+device = "Mobile";
+}
+
+document.getElementById("deviceType").value = device;
+
+}
+
+detectDevice();
+
+</script>  
+
+  
 </body>
 </html>
+
 
 
 
