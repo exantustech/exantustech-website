@@ -185,6 +185,15 @@ border-radius:6px;
 cursor:pointer;
 }
 
+.contact-form select{
+padding:14px;
+border:none;
+border-radius:5px;
+background:#020617;
+color:white;
+border:1px solid #1e293b;
+}
+
 footer{
 text-align:center;
 padding:40px 10%;
@@ -348,13 +357,29 @@ professional service with clear communication and dependable results.
 
 <h2 class="section-title">Request Service</h2>
 
-<form class="contact-form">
+<form class="contact-form"
+action="https://formspree.io/f/xqeyzrel"
+method="POST"
+enctype="multipart/form-data">
 
 <input type="text" placeholder="Your Name" required>
 
+<input type="tel" placeholder="Phone Number" required>
+
 <input type="email" placeholder="Email Address" required>
 
-<input type="text" placeholder="Service Needed">
+<input type="text" name="service" placeholder="Service Needed">
+
+<label>Device Type</label>
+<select name="device">
+<option value="">Select Device Type</option>
+<option value="PC">Computer / PC</option>
+<option value="Audio">Audio System</option>
+<option value="Video">Video / Display</option>
+</select>
+
+<label>Upload Screenshot (optional)</label>
+<input type="file" name="screenshot" accept="image/png, image/jpeg">
 
 <textarea placeholder="Describe your issue or installation project"></textarea>
 
@@ -372,5 +397,6 @@ professional service with clear communication and dependable results.
 
 </body>
 </html>
+
 
 
