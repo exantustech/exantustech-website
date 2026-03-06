@@ -1,255 +1,329 @@
-<!DOCTYPE html><html lang="en">
+Exantustech v3 index.html
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ExantusTech</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExantusTech | Technology Solutions</title>
+
+<style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-font-family:Inter, sans-serif;
-background:#0A0A0D;
-color:#F4F4F5;
+background:#0f172a;
+color:white;
 line-height:1.6;
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:0 24px;
-}
-
-/* NAVBAR */
-
 header{
-position:sticky;
-top:0;
-background:#0A0A0D;
-border-bottom:1px solid #1C1C24;
-z-index:100;
-}
-
-nav{
+background:#020617;
+padding:20px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 0;
+border-bottom:1px solid #1e293b;
 }
 
 .logo{
-font-weight:700;
-font-size:20px;
+font-size:24px;
+font-weight:bold;
+color:#38bdf8;
 }
 
 nav a{
-color:#9CA3AF;
+color:white;
+margin-left:25px;
 text-decoration:none;
-margin-left:26px;
-font-size:14px;
+font-size:15px;
 }
 
 nav a:hover{
-color:#fff;
+color:#38bdf8;
 }
 
-/* HERO */
-
 .hero{
-padding:140px 0;
+padding:100px 10%;
 text-align:center;
-background: radial-gradient(circle at top, rgba(99,102,241,0.15), transparent 60%);
+background:linear-gradient(180deg,#020617,#0f172a);
 }
 
 .hero h1{
-font-size:58px;
-font-weight:700;
-max-width:850px;
-margin:auto;
+font-size:42px;
+margin-bottom:20px;
 }
 
 .hero p{
-color:#9CA3AF;
-margin-top:20px;
 font-size:18px;
-max-width:600px;
-margin-left:auto;
-margin-right:auto;
+max-width:700px;
+margin:auto;
+opacity:.9;
 }
 
 .btn{
 display:inline-block;
-margin-top:35px;
-padding:14px 32px;
-background:linear-gradient(135deg,#6366F1,#4F46E5);
-border-radius:10px;
+margin-top:30px;
+padding:14px 28px;
+background:#38bdf8;
+color:black;
 text-decoration:none;
-color:white;
-font-weight:600;
+font-weight:bold;
+border-radius:6px;
+margin-right:10px;
 }
 
-/* SERVICES */
+.btn.secondary{
+background:transparent;
+border:1px solid #38bdf8;
+color:#38bdf8;
+}
 
-.services{
-padding:110px 0;
+section{
+padding:80px 10%;
 }
 
 .section-title{
+font-size:30px;
+margin-bottom:40px;
 text-align:center;
-font-size:34px;
-margin-bottom:20px;
 }
 
-.section-sub{
-text-align:center;
-color:#9CA3AF;
-max-width:600px;
-margin:auto;
-}
-
-.grid{
+.services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
-margin-top:60px;
 }
 
 .card{
-background:#141419;
-padding:35px;
-border-radius:16px;
-border:1px solid #1F1F27;
-transition:all .25s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-border-color:#6366F1;
+background:#020617;
+padding:30px;
+border-radius:8px;
+border:1px solid #1e293b;
 }
 
 .card h3{
-margin-bottom:10px;
-font-size:20px;
+margin-bottom:15px;
+color:#38bdf8;
 }
 
-/* WHY */
+.card p{
+opacity:.9;
+}
 
 .why{
-padding:110px 0;
-border-top:1px solid #1F1F27;
-}
-
-.why-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
-margin-top:60px;
-}
-
-.why-item{
-padding:20px;
-}
-
-.why-item h4{
-margin-bottom:10px;
-}
-
-/* PROCESS */
-
-.process{
-padding:110px 0;
-border-top:1px solid #1F1F27;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
 }
 
 .steps{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
-margin-top:50px;
+text-align:center;
 }
 
-.step{
-background:#141419;
-padding:30px;
-border-radius:14px;
-border:1px solid #1F1F27;
+.step-number{
+font-size:26px;
+color:#38bdf8;
+margin-bottom:10px;
 }
-
-/* CTA */
 
 .cta{
-padding:120px 0;
 text-align:center;
-border-top:1px solid #1F1F27;
-background: radial-gradient(circle at bottom, rgba(99,102,241,0.2), transparent 70%);
+background:#020617;
+border-top:1px solid #1e293b;
+border-bottom:1px solid #1e293b;
 }
-
-.cta h2{
-font-size:36px;
-}
-
-/* FOOTER */
 
 footer{
-padding:40px 0;
+padding:40px 10%;
 text-align:center;
-color:#777;
-border-top:1px solid #1F1F27;
+background:#020617;
+font-size:14px;
+opacity:.8;
 }
 
-</style></head><body><header>
-<div class="container">
-<nav><div class="logo">ExantusTech</div><div>
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">ExantusTech</div>
+
+<nav>
 <a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</div></nav>
-</div>
-</header><section class="hero"><div class="container"><h1>Professional Computer, Audio, and Video Solutions</h1><p>
-ExantusTech provides reliable technology services for homes and businesses — from computer repairs to complete audio and video system installations.
-</p><a href="#" class="btn">Request Service</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-</div></section><section class="services"><div class="container"><h2 class="section-title">Our Services</h2><p class="section-sub">
-Modern tech support and installation services designed for reliability and performance.
-</p><div class="grid"><div class="card">
+</header>
+
+<section class="hero">
+
+<h1>Professional Computer, Audio, and Video Solutions</h1>
+
+<p>
+ExantusTech provides reliable technology services for homes and businesses — 
+from computer repairs to complete audio and video system installations.
+</p>
+
+<a class="btn" href="#contact">Request Service</a>
+<a class="btn secondary" href="#services">View Services</a>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
 <h3>Computer Repair</h3>
-<p>Diagnostics, upgrades, virus removal, system optimization, and hardware repairs.</p>
-</div><div class="card">
-<h3>Audio Systems</h3>
-<p>Home and office audio setup including speakers, mixers, and sound optimization.</p>
-</div><div class="card">
-<h3>Video & Displays</h3>
-<p>TV mounting, display configuration, streaming setup, and troubleshooting.</p>
-</div><div class="card">
-<h3>Business Tech Support</h3>
-<p>Reliable technology support for professional offices and small businesses.</p>
-</div></div></div></section><section class="why"><div class="container"><h2 class="section-title">Why ExantusTech</h2><div class="why-grid"><div class="why-item">
-<h4>Reliable Support</h4>
-<p>Fast and dependable service for personal and business technology.</p>
-</div><div class="why-item">
-<h4>Modern Solutions</h4>
-<p>We implement up-to-date hardware and software solutions.</p>
-</div><div class="why-item">
-<h4>Professional Service</h4>
-<p>Clear communication and professional technical expertise.</p>
-</div></div></div></section><section class="process"><div class="container"><h2 class="section-title">How It Works</h2><div class="steps"><div class="step">
-<h4>1. Contact Us</h4>
-<p>Tell us about your technical issue or installation project.</p>
-</div><div class="step">
-<h4>2. Diagnosis</h4>
-<p>We analyze your system and determine the best solution.</p>
-</div><div class="step">
-<h4>3. Solution</h4>
-<p>Our team repairs, installs, or optimizes your technology.</p>
-</div><div class="step">
-<h4>4. Support</h4>
-<p>Ongoing support to keep everything running smoothly.</p>
-</div></div></div></section><section class="cta"><div class="container"><h2>Need Technology Help?</h2><p style="color:#9CA3AF;margin-top:10px;">
-Contact ExantusTech today for professional service.
-</p><a href="#" class="btn">Contact Us</a>
+<p>
+Diagnostics, upgrades, virus removal, system optimization, and hardware repairs.
+</p>
+</div>
 
-</div></section><footer><p>© 2026 ExantusTech • All rights reserved</p></footer></body>
+<div class="card">
+<h3>Audio Systems</h3>
+<p>
+Home and office audio setup including speakers, mixers, and sound optimization.
+</p>
+</div>
+
+<div class="card">
+<h3>Video & Displays</h3>
+<p>
+TV mounting, display configuration, streaming setup, and troubleshooting.
+</p>
+</div>
+
+<div class="card">
+<h3>Business Tech Support</h3>
+<p>
+Reliable technology support for offices and small businesses.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why ExantusTech</h2>
+
+<div class="why">
+
+<div class="card">
+<h3>Reliable Support</h3>
+<p>
+Fast and dependable service for personal and business technology.
+</p>
+</div>
+
+<div class="card">
+<h3>Modern Solutions</h3>
+<p>
+We implement up-to-date hardware and software solutions.
+</p>
+</div>
+
+<div class="card">
+<h3>Professional Service</h3>
+<p>
+Clear communication and professional technical expertise.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">How It Works</h2>
+
+<div class="steps">
+
+<div>
+<div class="step-number">1</div>
+<h3>Contact Us</h3>
+<p>Tell us about your technical issue or installation project.</p>
+</div>
+
+<div>
+<div class="step-number">2</div>
+<h3>Diagnosis</h3>
+<p>We analyze your system and determine the best solution.</p>
+</div>
+
+<div>
+<div class="step-number">3</div>
+<h3>Solution</h3>
+<p>We repair, install, or optimize your technology.</p>
+</div>
+
+<div>
+<div class="step-number">4</div>
+<h3>Support</h3>
+<p>Ongoing support to keep everything running smoothly.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About ExantusTech</h2>
+
+<p style="max-width:700px;margin:auto;text-align:center;opacity:.9;">
+ExantusTech delivers modern technology solutions for homes and businesses.
+From repairing computers to installing professional audio and video systems,
+our goal is simple — make technology work reliably for you.
+</p>
+
+</section>
+
+<section id="contact" class="cta">
+
+<h2 class="section-title">Need Technology Help?</h2>
+
+<p>Contact ExantusTech today for professional service.</p>
+
+<a class="btn" href="mailto:support@exantustech.com">Contact Us</a>
+
+</section>
+
+<footer>
+
+© 2026 ExantusTech • All rights reserved
+
+</footer>
+
+</body>
 </html>
