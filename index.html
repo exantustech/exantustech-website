@@ -1,74 +1,255 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ExantusTech</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ExantusTech</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
 
-<body>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<header>
-<div class="logo">ExantusTech</div>
+body{
+font-family:Inter, sans-serif;
+background:#0A0A0D;
+color:#F4F4F5;
+line-height:1.6;
+}
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="computers.html">Computers</a>
-<a href="audio.html">Audio</a>
-<a href="video.html">Video</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 24px;
+}
 
-<section class="hero">
+/* NAVBAR */
 
-<h1>Technology Solutions for Modern Homes & Businesses</h1>
+header{
+position:sticky;
+top:0;
+background:#0A0A0D;
+border-bottom:1px solid #1C1C24;
+z-index:100;
+}
 
-<p>
-Computers • Audio Systems • Video Installations
-</p>
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 0;
+}
 
-<div class="hero-buttons">
-<a class="primary">Request Service</a>
-<a class="secondary">Explore Services</a>
+.logo{
+font-weight:700;
+font-size:20px;
+}
+
+nav a{
+color:#9CA3AF;
+text-decoration:none;
+margin-left:26px;
+font-size:14px;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+/* HERO */
+
+.hero{
+padding:140px 0;
+text-align:center;
+background: radial-gradient(circle at top, rgba(99,102,241,0.15), transparent 60%);
+}
+
+.hero h1{
+font-size:58px;
+font-weight:700;
+max-width:850px;
+margin:auto;
+}
+
+.hero p{
+color:#9CA3AF;
+margin-top:20px;
+font-size:18px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:14px 32px;
+background:linear-gradient(135deg,#6366F1,#4F46E5);
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+/* SERVICES */
+
+.services{
+padding:110px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.section-sub{
+text-align:center;
+color:#9CA3AF;
+max-width:600px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:#141419;
+padding:35px;
+border-radius:16px;
+border:1px solid #1F1F27;
+transition:all .25s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#6366F1;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+/* WHY */
+
+.why{
+padding:110px 0;
+border-top:1px solid #1F1F27;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.why-item{
+padding:20px;
+}
+
+.why-item h4{
+margin-bottom:10px;
+}
+
+/* PROCESS */
+
+.process{
+padding:110px 0;
+border-top:1px solid #1F1F27;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.step{
+background:#141419;
+padding:30px;
+border-radius:14px;
+border:1px solid #1F1F27;
+}
+
+/* CTA */
+
+.cta{
+padding:120px 0;
+text-align:center;
+border-top:1px solid #1F1F27;
+background: radial-gradient(circle at bottom, rgba(99,102,241,0.2), transparent 70%);
+}
+
+.cta h2{
+font-size:36px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 0;
+text-align:center;
+color:#777;
+border-top:1px solid #1F1F27;
+}
+
+</style></head><body><header>
+<div class="container">
+<nav><div class="logo">ExantusTech</div><div>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div></nav>
 </div>
-  
-</section>
+</header><section class="hero"><div class="container"><h1>Professional Computer, Audio, and Video Solutions</h1><p>
+ExantusTech provides reliable technology services for homes and businesses — from computer repairs to complete audio and video system installations.
+</p><a href="#" class="btn">Request Service</a>
 
-<section class="services">
+</div></section><section class="services"><div class="container"><h2 class="section-title">Our Services</h2><p class="section-sub">
+Modern tech support and installation services designed for reliability and performance.
+</p><div class="grid"><div class="card">
+<h3>Computer Repair</h3>
+<p>Diagnostics, upgrades, virus removal, system optimization, and hardware repairs.</p>
+</div><div class="card">
+<h3>Audio Systems</h3>
+<p>Home and office audio setup including speakers, mixers, and sound optimization.</p>
+</div><div class="card">
+<h3>Video & Displays</h3>
+<p>TV mounting, display configuration, streaming setup, and troubleshooting.</p>
+</div><div class="card">
+<h3>Business Tech Support</h3>
+<p>Reliable technology support for professional offices and small businesses.</p>
+</div></div></div></section><section class="why"><div class="container"><h2 class="section-title">Why ExantusTech</h2><div class="why-grid"><div class="why-item">
+<h4>Reliable Support</h4>
+<p>Fast and dependable service for personal and business technology.</p>
+</div><div class="why-item">
+<h4>Modern Solutions</h4>
+<p>We implement up-to-date hardware and software solutions.</p>
+</div><div class="why-item">
+<h4>Professional Service</h4>
+<p>Clear communication and professional technical expertise.</p>
+</div></div></div></section><section class="process"><div class="container"><h2 class="section-title">How It Works</h2><div class="steps"><div class="step">
+<h4>1. Contact Us</h4>
+<p>Tell us about your technical issue or installation project.</p>
+</div><div class="step">
+<h4>2. Diagnosis</h4>
+<p>We analyze your system and determine the best solution.</p>
+</div><div class="step">
+<h4>3. Solution</h4>
+<p>Our team repairs, installs, or optimizes your technology.</p>
+</div><div class="step">
+<h4>4. Support</h4>
+<p>Ongoing support to keep everything running smoothly.</p>
+</div></div></div></section><section class="cta"><div class="container"><h2>Need Technology Help?</h2><p style="color:#9CA3AF;margin-top:10px;">
+Contact ExantusTech today for professional service.
+</p><a href="#" class="btn">Contact Us</a>
 
-<h2>Our Services</h2>
-
-<div class="service-grid">
-
-<div class="card">
-<h3>Computers</h3>
-<p>Custom builds, repair, networking, and upgrades.</p>
-</div>
-
-<div class="card">
-<h3>Audio</h3>
-<p>Professional sound systems for homes and offices.</p>
-</div>
-
-<div class="card">
-<h3>Video</h3>
-<p>TV installation, displays, and home theater setups.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 ExantusTech</p>
-</footer>
-
-</body>
-
+</div></section><footer><p>© 2026 ExantusTech • All rights reserved</p></footer></body>
 </html>
-
-
